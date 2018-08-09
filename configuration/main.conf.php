@@ -32,7 +32,7 @@ define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].dirname($_SERVER['SCRIPT_NAME
 $this->pathArticles = 'articles/';
 
 $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-$pdo = new PDO('mysql:host=localhost;dbname=5320','root','Vales5320+',$pdo_options);
+$pdo = new PDO('mysql:host=localhost;dbname=','','',$pdo_options);
 $this->dbPdo = $pdo;
 
 $this->defaultComponent = 'users';  //Composant appelé par défaut à l'arrivée sur la page index.php
