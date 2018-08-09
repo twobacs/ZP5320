@@ -5,7 +5,7 @@
  include_once('/var/lib/webapp/v0.12.02.09/webapp.class.php');  //Chemin de là ou se trouve le dossier webapp, généralement /var/lib/
 // print_r($_COOKIE);
 // echo '<br />';
- //print_r($_SESSION);
+ print_r($_SESSION);
  $webApp = new WebApp($_REQUEST);
  $webApp->websitePath = realpath('.');
  $webApp->execute();
