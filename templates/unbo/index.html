@@ -1,0 +1,41 @@
+<!--
+Created by Jeremy De Backer
+Contact : jeremy.debacker@police.belgium.eu
+
+ ▐▄▄▄▄▄▄ .▄▄▄  ▄▄▄ .• ▌ ▄ ·.  ▄· ▄▌             
+  ·██▀▄.▀·▀▄ █·▀▄.▀··██ ▐███▪▐█▪██▌             
+▪▄ ██▐▀▀▪▄▐▀▀▄ ▐▀▀▪▄▐█ ▌▐▌▐█·▐█▌▐█▪             
+▐▌▐█▌▐█▄▄▌▐█•█▌▐█▄▄▌██ ██▌▐█▌ ▐█▀·.             
+ ▀▀▀• ▀▀▀ .▀  ▀ ▀▀▀ ▀▀  █▪▀▀▀  ▀ •              
+·▄▄▄▄  ▄▄▄ .    ▄▄▄▄·  ▄▄▄·  ▄▄· ▄ •▄ ▄▄▄ .▄▄▄  
+██▪ ██ ▀▄.▀·    ▐█ ▀█▪▐█ ▀█ ▐█ ▌▪█▌▄▌▪▀▄.▀·▀▄ █·
+▐█· ▐█▌▐▀▀▪▄    ▐█▀▀█▄▄█▀▀█ ██ ▄▄▐▀▀▄·▐▀▀▪▄▐▀▀▄ 
+██. ██ ▐█▄▄▌    ██▄▪▐█▐█ ▪▐▌▐███▌▐█.█▌▐█▄▄▌▐█•█▌
+▀▀▀▀▀•  ▀▀▀     ·▀▀▀▀  ▀  ▀ ·▀▀▀ ·▀  ▀ ▀▀▀ .▀  ▀
+
+-->
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+		<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/icon"/>-->
+		<title>ZP Val de l'Escaut</title>
+                <link rel="stylesheet" type="text/css" href="/5320/templates/unbo/css/zp5320.css"/>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!--<script type="text/javascript" src="./js/****.js"></script> REMPLACER LES * PAR LE NOM DE TON FICHIER JS-->
+		<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="./js/js5320.js"></script>
+                <!-- <script src="/IEPSM/ckeditor5/ckeditor.js"></script> -->
+	</head>
+
+	 <body>
+             
+                <div id="TopMenu"><?php echo $this->Menu; ?></div>
+                <div id="Corps">
+                    <div id="LeftSide"><?php echo $this->Left; ?></div>
+                    <div id="Content"><?php echo $this->Content; ?></div>
+                    <div id="RightSide"><?php echo $this->Right; ?></div>
+                </div>
+                <div id="Bottom"><?php echo $this->Foot; ?></div>
+		
+	</body>
+</html>

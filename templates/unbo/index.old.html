@@ -1,0 +1,19 @@
+<!doctype html>
+	<head>
+		<meta charset="utf-8">
+		<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/icon"/>-->
+		<title>Unbo template</title>
+		<?php echo $this->cssFile; ?>
+		<!--<script type="text/javascript" src="./js/****.js"></script> REMPLACER LES * PAR LE NOM DE TON FICHIER JS-->
+		<script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
+	</head>
+
+	 <body>
+		
+		<!-- Pour afficher du contenu, utiliser, par exemple : <?php echo $this->content; ?>  Dans les vues, utiliser la ligne $this->appli->content=$ceQueTuAsConstruitAuFormatHTML -->
+		
+		<!-- Les modules sont chargés à chaque chargement de page, c'est utile s'il faut afficher une partie de site en permanence, on l'affiche ici en utilisant <?php echo $this->moduleTest; ?>, pour que cela fonctionne, il faut le déclarer dans configuration/modules.conf.php.
+		Le module en lui même se trouve dans modules/ et est nommé module.test.php -->
+		
+	</body>
+</html>
