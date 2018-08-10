@@ -47,19 +47,26 @@ class VUsers extends VBase {
 		$index=(isset($_GET['index']) ? $_GET['index'] : '%' );
 		$html='<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups" style="display:block;">
 		<div class="btn-group" role="group" aria-label="First group">';
-		foreach(range('A','Z') as $i) {
-			$html.='<button type="button" class="';
+		foreach(range('A','M') as $i) {
+			$html.='<button type="button" style="width:40px;"class="';
 			$html.=(($index==$i) ? 'btn btn-primary' : 'btn btn-secondary');
 			$html.='" onclick="window.location.href=\'?index.php&component=users&action=listUsers&index='.$i.'\';">'.$i.'</button>';
 		}
-		$html.='<button type="button" class="btn btn-secondary" onclick="window.location.href=\'?index.php&component=users&action=listUsers&index=%\';">TOUS</button>';
+		$html.='</div><div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups" style="display:block;">
+		<div class="btn-group" role="group" aria-label="First group">';
+		foreach(range('N','Z') as $i) {
+			$html.='<button type="button" style="width:40px;" class="';
+			$html.=(($index==$i) ? 'btn btn-primary' : 'btn btn-secondary');
+			$html.='" onclick="window.location.href=\'?index.php&component=users&action=listUsers&index='.$i.'\';">'.$i.'</button>';
+		}
+		//$html.='<button type="button" class="btn btn-secondary" onclick="window.location.href=\'?index.php&component=users&action=listUsers&index=%\';">TOUS</button>';
 		$html.='</div></div><br />';	
-		$html.='<table class="table table-hover">
-		<thead><tr><th scope="col">Nom</th><th scope="col">Pr&eacute;nom</th><th scope="col">Matricule</th></tr></thead><tbody>';
+		$html.='<table class="table table-hover" style="text-align:left;">
+		<thead><tr><th scope="col" style="width:30%;">Nom</th><th scope="col" style="width:30%;">Pr&eacute;nom</th><th scope="col" style="width:30%;">Matricule</th></tr></thead><tbody>';
 		foreach($users as $row){
 			$html.='<tr onclick="showInfosUser(\''.$row['login'].'\');" style="cursor:pointer;"><th scope="row">'.$row['nom'].'</th><td>'.$row['prenom'].'</td><td>'.$row['login'].'</td></tr>';
 			}
-		$html.='</tbody></table>';
+		$html.='</tbody></table></div>';
 		$this->appli->Content=$html;
 		}
 }

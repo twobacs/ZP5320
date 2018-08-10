@@ -11,7 +11,7 @@ body{
 }
 #TopMenu{
     margin: 2%;
-    min-height: 8%;
+    height: 8%;
     top : 0;
     width:95%;
     text-align: center;
@@ -29,9 +29,8 @@ body{
     /*border : 1px black solid;*/
 }
 
-#Corps{
+#Corps{	
     display: flex;
-    justify-content: space-around;
     text-align: center;
 	overflow:auto;
     /*border : 1px black solid;*/
@@ -43,17 +42,18 @@ body{
 }
 
 #Content{
-	margin:auto;
-	/*text-align:center;*/
-    width: 57%;
-	height:80%;
+	margin-left:auto;
+	margin-right:auto;
+    width: 55%;
+	height:650px;
 	overflow:auto;
     /*border : 1px black solid;*/
 }
 
 #RightSide{
     width: 21%;
-    /*border : 1px black solid;*/
+	padding-right:1%;
+   /* border : 1px black solid;*/
 }
 
 .login-page {
