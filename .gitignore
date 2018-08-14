@@ -1,2 +1,2 @@
-main.conf.php
-connect.php
+configuration/main.conf.php
+js/php/connect.php
