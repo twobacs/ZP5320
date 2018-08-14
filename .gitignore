@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 main.conf.php
 connect.php
 js/php/connect.php
+=======
+configuration/main.conf.php
+>>>>>>> 8227437d91e0a821431c10756621d2bf969f4125
 js/php/connect.php
