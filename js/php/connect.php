@@ -1,7 +1,7 @@
 <?php
 
 <<<<<<< HEAD
-$pdo = new PDO('mysql:host=localhost;dbname=5320','root','Vales5320+');
+$pdo = new PDO('mysql:host=localhost;dbname=','','');
 
 =======
 $pdo = new PDO('mysql:host=localhost;dbname=','','');
