@@ -13,7 +13,7 @@ class CUsers extends CBase {
     public function login(){
         $logged=$this->model->login();
         if($logged){
-            $this->view->bienvenue();
+            $this->view->bienvenue('0');
         }
         else{
             header("location:index.php?error");
@@ -41,10 +41,16 @@ class CUsers extends CBase {
 	
 	public function listUsers(){
 		if(isset($_SESSION['identifiedUser'])){
+			$_SESSION['actualComponent']='Utilisateurs';
 			$_SESSION['actualAction']='listUsers';
 			$nivAcces= $_SESSION['accessUtilisateurs'];
-			$users=$this->model->getListUsers();
-			$this->view->listUsers($users);
+			if($nivAcces>'0'){
+				$users=$this->model->getListUsers();
+				$this->view->listUsers($users);
+				}
+			else{
+				$this->view->bienvenue('1');
+				}
 			}
 		else{
 			header("location:index.php?timeout");
@@ -54,7 +60,21 @@ class CUsers extends CBase {
 	
 	public function add(){
 		if(isset($_SESSION['identifiedUser'])){
+			$_SESSION['actualComponent']='Utilisateurs';
 			$_SESSION['actualAction']='addUser';
+			$nivAcces= $_SESSION['accessUtilisateurs'];
+			if($nivAcces>'0'){
+				if(isset($_GET['step'])){
+						$a=$this->model->addUser();
+						$this->view->formAddUser($a);
+					}
+				else{	
+					$this->view->formAddUser();
+				}
+			}
+			else{
+				$this->view->bienvenue('1');
+				}
 		}
 		else{
 			header("location:index.php?timeout");

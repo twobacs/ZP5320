@@ -47,6 +47,7 @@ body{
     width: 55%;
 	height:650px;
 	overflow:auto;
+	text-align:center;
     /*border : 1px black solid;*/
 }
 
@@ -86,7 +87,7 @@ body{
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #f2f2f2;
   width: 100%;
   border: 0;
   padding: 15px;
@@ -110,4 +111,38 @@ body{
 }
 .form .register-form {
   display: none;
+}
+
+#id_confrmdiv
+{
+    display: none;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    /*position: fixed;*/
+    width: 300px;
+    left: 50%;
+    /*margin-left: -150px;*/
+    padding: 6px 8px 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#id_confrmdiv button {
+    background-color: #ccc;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    padding: 2px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+}
+#id_confrmdiv button:hover
+{
+    background-color: #ddd;
+}
+#confirmBox .message
+{
+    text-align: left;
+    margin-bottom: 8px;
 }
